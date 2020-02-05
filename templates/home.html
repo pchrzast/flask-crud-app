@@ -1,9 +1,14 @@
 <html>
   <body>
-    <h1>Add book</h1>
+    <h1>Add book title</h1>
     <form method="POST" action="/">
       <input type="text" name="title">
-      <input type="submit" value="Add">
+      <input type="submit" value="Add title">
+    </form>
+    <h1>Add book cover image</h1>
+    <form method="POST" action="/">
+        <input type="file" name="cover">
+        <input type="submit" value="Add cover">
     </form>
 
     <h1>Books</h1>
@@ -28,6 +33,12 @@
           </td>
         </tr>
       {% endfor %}
+    </table>
+    <h1>Covers</h1>
+    <table>
+      <img src={{ url_for('static', filename='BlackOut.jpg') }} alt="BO" style="width:150px">
+      <img src={{ url_for('static', filename='HarryPotter.jpeg') }} alt="HP" style="width:150px">
+      <img src={{ url_for('static', filename='LordOfTheRings.jpg') }} alt="LOTR" style="width:150px">
     </table>
   </body>
 </html>
